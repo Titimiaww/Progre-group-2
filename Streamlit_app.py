@@ -2,62 +2,72 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Membaca gambar
-image = cv2.imread('img.jpeg') 
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  # Mengonversi citra dari BGR ke RGB
+# Load the image
+image = cv2.imread('input_image.jpg')  # Change to your image path
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  # Convert BGR to RGB for matplotlib
 
-# 1. Rotasi
+# Function to apply rotation
 def rotate_image(image, angle):
-    # Mendapatkan dimensi citra
-    (h, w) = image.shape[:2]
-    # Titik pusat gambar untuk rotasi
-    center = (w // 2, h // 2)
-    # Matriks transformasi rotasi
-    M = cv2.getRotationMatrix2D(center, angle, 1.0)
-    # Melakukan rotasi citra
-    rotated_image = cv2.warpAffine(image, M, (w, h))
+    # Get the image center
+    center = (image.shape[1] // 2, image.shape[0] // 2)
+    # Get the rotation matrix
+    rotation_matrix = cv2.getRotationMatrix2D(center, angle, 1.0)
+    # Apply the rotation
+    rotated_image = cv2.warpAffine(image, rotation_matrix, (image.shape[1], image.shape[0]))
     return rotated_image
 
-# 2. Penskalaan (Scaling)
-def scale_image(image, scale_factor):
-    # Menghitung ukuran baru
-    new_w = int(image.shape[1] * scale_factor)
-    new_h = int(image.shape[0] * scale_factor)
-    # Mengubah ukuran gambar
-    scaled_image = cv2.resize(image, (new_w, new_h))
+# Function to apply scaling
+def scale_image(image, fx, fy):
+    # Apply scaling
+    scaled_image = cv2.resize(image, None, fx=fx, fy=fy, interpolation=cv2.INTER_LINEAR)
     return scaled_image
 
-# 3. Translasi
+# Function to apply translation
 def translate_image(image, tx, ty):
-    # Matriks translasi
-    M = np.float32([[1, 0, tx], [0, 1, ty]])
-    # Melakukan translasi citra
-    translated_image = cv2.warpAffine(image, M, (image.shape[1], image.shape[0]))
+    # Translation matrix
+    translation_matrix = np.float32([[1, 0, tx], [0, 1, ty]])
+    # Apply translation
+    translated_image = cv2.warpAffine(image, translation_matrix, (image.shape[1], image.shape[0]))
     return translated_image
 
-# 4. Skewing (Shearing)
-def skew_image(image, shear_factor_x, shear_factor_y):
-    # Matriks skewing
-    M = np.float32([[1, shear_factor_x, 0], [shear_factor_y, 1, 0]])
-    # Melakukan skewing citra
-    skewed_image = cv2.warpAffine(image, M, (image.shape[1], image.shape[0]))
+# Function to apply skewing (shearing)
+def skew_image(image, alpha, beta):
+    # Define the skewing matrix for x and y
+    skew_matrix = np.float32([[1, np.tan(np.radians(alpha)), 0], 
+                               [np.tan(np.radians(beta)), 1, 0]])
+    # Apply skewing
+    skewed_image = cv2.warpAffine(image, skew_matrix, (image.shape[1], image.shape[0]))
     return skewed_image
 
-# Menampilkan hasil gambar
-def show_images(images, titles):
-    plt.figure(figsize=(15, 10))
-    for i, (image, title) in enumerate(zip(images, titles)):
-        plt.subplot(2, 3, i+1)
-        plt.imshow(image)
-        plt.title(title)
-        plt.axis('off')
-    plt.show()
+# Example transformations
+rotated_image = rotate_image(image, 45)  # Rotate by 45 degrees
+scaled_image = scale_image(image, 1.5, 1.5)  # Scale by 1.5 times
+translated_image = translate_image(image, 100, 50)  # Translate by (100, 50)
+skewed_image = skew_image(image, 30, 20)  # Skew by 30 degrees along x and 20 degrees along y
 
-# Menggunakan fungsi-fungsi di atas
-rotated = rotate_image(image, 45)  # Rotasi 45 derajat
-scaled = scale_image(image, 0.5)  # Penskalaan dengan faktor 0.5
-translated = translate_image(image, 50, 50)  # Translasi 50 piksel di x dan y
-skewed = skew_image(image, 0.5, 0)  # Skewing horizontal dengan faktor 0.5
+# Display the images using matplotlib
+plt.figure(figsize=(10, 10))
 
-# Menampilkan gambar
-show_images([rotated, scaled, translated, skewed], ['Rotated 45°', 'Scaled 0.5', 'Translated', 'Skewed'])
+plt.subplot(2, 2, 1)
+plt.imshow(rotated_image)
+plt.title("Rotated Image (45 degrees)")
+plt.axis('off')
+
+plt.subplot(2, 2, 2)
+plt.imshow(scaled_image)
+plt.title("Scaled Image (1.5x)")
+plt.axis('off')
+
+plt.subplot(2, 2, 3)
+plt.imshow(translated_image)
+plt.title("Translated Image (100, 50)")
+plt.axis('off')
+
+plt.subplot(2, 2, 4)
+plt.imshow(skewed_image)
+plt.title("Skewed Image (30x, 20y)")
+plt.axis('off')
+
+# Show the plot
+plt.tight_layout()
+plt.show()
