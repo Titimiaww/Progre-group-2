@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Membaca gambar
-image = cv2.imread(r'C:\Users\LOQ\Pictures\Kucing sweg.jpeg') 
+image = cv2.imread('img.jpeg') 
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  # Mengonversi citra dari BGR ke RGB
 
 # 1. Rotasi
