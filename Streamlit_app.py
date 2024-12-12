@@ -1,15 +1,22 @@
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
 import streamlit as st
 
-# Fungsi untuk memuat gambar
-def load_image(image_path):
-    image = cv2.imread(image_path)
+# Fungsi untuk memuat gambar dari file yang diunggah
+def load_image(image_file):
+    # Mengonversi file yang diunggah menjadi array NumPy
+    image_bytes = np.asarray(bytearray(image_file.read()), dtype=np.uint8)
+    
+    # Mendekode byte gambar menjadi gambar menggunakan OpenCV
+    image = cv2.imdecode(image_bytes, cv2.IMREAD_COLOR)
+    
+    # Memeriksa apakah gambar berhasil dimuat
     if image is None:
-        st.error("Gambar gagal dimuat. Periksa path gambar.")
+        st.error("Gambar gagal dimuat. Periksa format file.")
         return None
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  # Konversi BGR ke RGB untuk matplotlib
+    
+    # Mengonversi dari BGR ke RGB (untuk tampilan yang benar di Streamlit)
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     return image
 
 # Fungsi untuk rotasi gambar
