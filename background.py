@@ -3,7 +3,7 @@ import numpy as np
 import streamlit as st
 
 # Mengatur konfigurasi halaman
-st.set_page_config(page_title="Transformasi Gambar Group 2", layout="wide")
+st.set_page_config(page_title="Transformasi Gambar", layout="wide")
 
 # Menambahkan gambar latar belakang universitas dengan CSS
 st.markdown(
@@ -31,7 +31,7 @@ menu = ["Home", "Upload & Transform"]
 choice = st.sidebar.selectbox("Pilih Menu", menu)
 
 # Judul Utama
-st.title("Selamat datang di Website Transformasi Gambar Group 2")
+st.title("Selamat datang di Website Transformasi Gambar")
 
 # Konten Berdasarkan Menu yang Dipilih
 if choice == "Home":
