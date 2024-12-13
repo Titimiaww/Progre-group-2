@@ -14,7 +14,6 @@ st.markdown(
         background-size: cover;  /* Membuat gambar latar belakang menutupi seluruh layar */
         background-position: center;  /* Gambar diletakkan di tengah layar */
         background-attachment: fixed;  /* Gambar latar belakang tetap saat scroll */
-        filter: blur(8px);  /* Membuat gambar latar belakang menjadi buram */
     }
     .sidebar .sidebar-content {
         background-color: rgba(255, 255, 255, 0.8); /* Membuat latar belakang sidebar sedikit transparan */
@@ -25,7 +24,7 @@ st.markdown(
 )
 
 # Menambahkan logo universitas di bagian atas halaman
-st.image("Logo-HD-2.jpg", width=200)  # Ganti dengan URL gambar logo universitas yang benar
+st.image("Logo-HD-2.jpg", width=0)  # Ganti dengan URL gambar logo universitas yang benar
 
 # Sidebar untuk navigasi
 menu = ["Home", "Upload & Transform"]
