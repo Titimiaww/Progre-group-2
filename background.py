@@ -35,10 +35,10 @@ st.title("Selamat datang di Website Transformasi Gambar")
 
 # Konten Berdasarkan Menu yang Dipilih
 if choice == "Home":
-    st.write("Pilih menu di sebelah kiri untuk memulai!")
+    st.write("Group 2")
     
-    st.subheader("Foto Members:")
-    st.write("Nama anggota Group 2:")
+    st.subheader("Pilih menu di sebelah kiri untuk memulai!")
+    st.write("Members:")
     
     # Menampilkan foto anggota dengan nama mereka
     col1, col2, col3 = st.columns(3)
