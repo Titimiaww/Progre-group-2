@@ -10,7 +10,7 @@ st.markdown(
     """
     <style>
     body {
-        background-image: url("https://raw.githubusercontent.com/Titimiaww/Progre-group-2/8902b6af6893e8af303aa351d33af680802a468e/Logo-HD-2.jpg");  /* URL gambar latar belakang */
+        background-image: url("tXGyPGIz_400x400.png");  /* URL gambar latar belakang */
         background-size: cover;  /* Membuat gambar latar belakang menutupi seluruh layar */
         background-position: center;  /* Gambar diletakkan di tengah layar */
         background-attachment: fixed;  /* Gambar latar belakang tetap saat scroll */
