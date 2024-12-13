@@ -52,7 +52,7 @@ if choice == "Home":
 
 elif choice == "Upload & Transform":
     st.subheader("Upload Gambar dan Transformasi")
-    st.write("Di sini Anda dapat meng-upload gambar dan melakukan transformasi.")
+    st.write("Di sini Anda dapat meng-upload gambar dan melakukan transformasi 🐾🐾")
     
     # Membuat uploader untuk gambar
     uploaded_file = st.file_uploader("Pilih gambar", type=["jpg", "png", "jpeg"])
