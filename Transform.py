@@ -39,7 +39,7 @@ if choice == "Home":
     
     st.subheader("🐾『GROUP 2』 🐾")
     st.write("Industrial Engineering")
-    st.write("Nama Members:")
+    st.write("Nama Members 𓆉 𓆝 𓆡")
     
     # Menampilkan foto anggota dengan nama mereka
     col1, col2, col3 = st.columns(3)
