@@ -10,9 +10,11 @@ st.markdown(
     """
     <style>
     body {
-        background-image: url ("https://github.com/Titimiaww/Progre-group-2/blob/8902b6af6893e8af303aa351d33af680802a468e/Logo-HD-2.jpg");  /* Ganti dengan URL gambar latar belakang universitas */
-        background-position: center;
-        background-attachment: fixed;
+        background-image: url("https://raw.githubusercontent.com/Titimiaww/Progre-group-2/8902b6af6893e8af303aa351d33af680802a468e/Logo-HD-2.jpg");  /* URL gambar latar belakang */
+        background-size: cover;  /* Membuat gambar latar belakang menutupi seluruh layar */
+        background-position: center;  /* Gambar diletakkan di tengah layar */
+        background-attachment: fixed;  /* Gambar latar belakang tetap saat scroll */
+        filter: blur(8px);  /* Membuat gambar latar belakang menjadi buram */
     }
     .sidebar .sidebar-content {
         background-color: rgba(255, 255, 255, 0.8); /* Membuat latar belakang sidebar sedikit transparan */
