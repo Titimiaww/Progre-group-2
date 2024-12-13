@@ -8,7 +8,7 @@ st.markdown(
     """
     <style>
     body {
-        background-image: url("https://example.com/path-to-university-image.jpg");  /* Ganti dengan URL gambar latar belakang universitas */
+        background-image: url("Logo-HD-2.jpg");  /* Ganti dengan URL gambar latar belakang universitas */
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
