@@ -48,7 +48,7 @@ if choice == "Home":
     with col2:
         st.image("F.jpg", caption="Aliffa Fiqria Wanda")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
     with col3:
-        st.image("Siti Khomsiah.jpg", caption="Siti Khomsiah")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
+        st.image("S.jpg", caption="Siti Khomsiah")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
 
 elif choice == "Upload & Transform":
     st.subheader("Upload Gambar dan Transformasi")
