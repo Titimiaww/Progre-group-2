@@ -31,7 +31,14 @@ menu = ["Home", "Upload & Transform"]
 choice = st.sidebar.selectbox("Pilih Menu", menu)
 
 # Judul Utama
-st.title("Selamat datang di Website Transformasi Gambar")
+st.title("Selamat datang di Website Transformasi Gambar .                  ／＞-🌱-フ
+　　　　　| 　_　 _ l
+　 　　　／` ミ＿xノ
+　　 　 /　　　 　 |
+　　　 /　 ヽ　　 ﾉ
+　／￣|　　 |　 |   |
+　| (￣ヽ＿_ヽ__) _)
+　＼二つ")
 
 # Konten Berdasarkan Menu yang Dipilih
 if choice == "Home":
