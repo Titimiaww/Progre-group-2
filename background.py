@@ -38,7 +38,7 @@ if choice == "Home":
     # Menampilkan foto anggota dengan nama mereka
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("https://via.placeholder.com/150", caption="Aep Saepudin")  # Ganti dengan foto asli
+        st.image("Kucing sweg.jpeg/150", caption="Aep Saepudin")  # Ganti dengan foto asli
     with col2:
         st.image("https://via.placeholder.com/150", caption="Aliffa Fiqria Wanda")  # Ganti dengan foto asli
     with col3:
