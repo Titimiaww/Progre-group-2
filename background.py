@@ -11,7 +11,6 @@ st.markdown(
     <style>
     body {
         background-image: url ("https://github.com/Titimiaww/Progre-group-2/blob/8902b6af6893e8af303aa351d33af680802a468e/Logo-HD-2.jpg");  /* Ganti dengan URL gambar latar belakang universitas */
-        background-size: cover;
         background-position: center;
         background-attachment: fixed;
     }
