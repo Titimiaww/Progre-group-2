@@ -40,9 +40,9 @@ if choice == "Home":
     with col1:
         st.image("Kucing sweg.jpeg/150", caption="Aep Saepudin")  # Ganti dengan foto asli
     with col2:
-        st.image("https://via.placeholder.com/150", caption="Aliffa Fiqria Wanda")  # Ganti dengan foto asli
+        st.image("/150", caption="Aliffa Fiqria Wanda")  # Ganti dengan foto asli
     with col3:
-        st.image("https://via.placeholder.com/150", caption="Siti Khomsiah")  # Ganti dengan foto asli
+        st.image("dog 🐶.jpeg/150", caption="Siti Khomsiah")  # Ganti dengan foto asli
 
 elif choice == "Upload & Transform":
     st.subheader("Upload Gambar dan Transformasi")
