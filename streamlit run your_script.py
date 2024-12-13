@@ -1,4 +1,4 @@
-[theme]
+config.toml
 base = "dark"
 font = "monospace"
 primaryColor = "#1f77b4"
