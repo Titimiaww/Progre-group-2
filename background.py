@@ -14,7 +14,6 @@ st.markdown(
         background-size: cover;  /* Membuat gambar latar belakang menutupi seluruh layar */
         background-position: center;  /* Gambar diletakkan di tengah layar */
         background-attachment: fixed;  /* Gambar latar belakang tetap saat scroll */
-        filter: blur(8px);  /* Membuat gambar latar belakang menjadi buram */
     }
     .sidebar .sidebar-content {
         background-color: rgba(255, 255, 255, 0.8); /* Membuat latar belakang sidebar sedikit transparan */
