@@ -35,7 +35,7 @@ st.title("Selamat datang di Website Transformasi Gambar")
 
 # Konten Berdasarkan Menu yang Dipilih
 if choice == "Home":
-    st.write("Pilih menu di sebelah kiri untuk memulai!")
+    st.write("Pilih menu di sebelah kiri untuk memulai!  ﹏𓊝﹏𓂁﹏")
     
     st.subheader("Group 2 ≽^•⩊•^≼")
     st.write("Industrial Engineering")
