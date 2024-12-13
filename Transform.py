@@ -43,7 +43,7 @@ if choice == "Home":
     # Menampilkan foto anggota dengan nama mereka
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("Gambar WhatsApp 2024-12-13 pukul 19.55.18_acc489e8.jpg", caption="Aep Saepudin")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
+        st.image("Aep Saepudin.png", caption="Aep Saepudin")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
     with col2:
         st.image("Gambar WhatsApp 2024-12-13 pukul 19.55.18_8ebc55f9.jpg", caption="Aliffa Fiqria Wanda")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
     with col3:
