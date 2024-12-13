@@ -38,7 +38,7 @@ if choice == "Home":
     st.write("Pilih menu di sebelah kiri untuk memulai!")
     
     st.subheader("Group 2!")
-    st.header("Industrial Engineering")
+    st.write("Industrial Engineering")
     st.write("Nama Members:")
     
     # Menampilkan foto anggota dengan nama mereka
