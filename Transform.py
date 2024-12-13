@@ -45,7 +45,7 @@ if choice == "Home":
     with col1:
         st.image("Kucing sweg.jpeg", caption="Aep Saepudin")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
     with col2:
-        st.image("kucing cool.jpeg", caption="Aliffa Fiqria Wanda")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
+        st.image("Gambar WhatsApp 2024-12-13 pukul 19.55.18_8ebc55f9.jpg", caption="Aliffa Fiqria Wanda")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
     with col3:
         st.image("Gambar WhatsApp 2024-12-13 pukul 19.55.17_dd4123ee.jpg", caption="Siti Khomsiah")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
 
