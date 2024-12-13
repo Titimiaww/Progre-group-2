@@ -44,7 +44,7 @@ if choice == "Home":
     # Menampilkan foto anggota dengan nama mereka
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("Aep Saepudin.png", caption="Aep Saepudin")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
+        st.image("A.jpg", caption="Aep Saepudin")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
     with col2:
         st.image("Aliffa Fiqria Wanda.jpg", caption="Aliffa Fiqria Wanda")  # Pastikan gambar ada di folder yang sama atau gunakan path yang benar
     with col3:
