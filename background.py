@@ -25,7 +25,7 @@ st.markdown(
 )
 
 # Menambahkan logo universitas di bagian atas halaman
-st.image("https://path_to_your_university_logo.jpg", width=200)  # Ganti dengan URL gambar logo universitas yang benar
+st.image("Logo-HD-2.jpg", width=200)  # Ganti dengan URL gambar logo universitas yang benar
 
 # Sidebar untuk navigasi
 menu = ["Home", "Upload & Transform"]
