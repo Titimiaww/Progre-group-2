@@ -10,7 +10,7 @@ st.markdown(
     """
     <style>
     body {
-        background-image: url("civil engineering study inspiration.jpeg");  /* URL gambar latar belakang */
+        background-image: url("Logo-HD-2.jpg");  /* URL gambar latar belakang */
         background-size: cover;  /* Membuat gambar latar belakang menutupi seluruh layar */
         background-position: center;  /* Gambar diletakkan di tengah layar */
         background-attachment: fixed;  /* Gambar latar belakang tetap saat scroll */
