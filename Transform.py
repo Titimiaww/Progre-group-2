@@ -127,12 +127,7 @@ elif choice == "Upload & Transform":
                 beta = st.slider("Skew Y Axis (degrees)", min_value=-45, max_value=45, value=20)
                 skewed_image = skew_image(image, alpha, beta)
                 st.image(skewed_image, caption="Skewed Image", use_container_width=True)
-            if transformed_image is not None:
-                # Saving the transformed image to a temporary file
-                with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as tmpfile:
-                    tmpfile.name = tmpfile.name.replace(".temp", ".png")  # Ensuring the file ends with .png
-                    cv2.imwrite(tmpfile.name, cv2.cvtColor(transformed_image, cv2.COLOR_RGB2BGR))
-
+           
                     # Provide the option to download the transformed image
                     with open(tmpfile.name, "rb") as file:
                         st.download_button(
