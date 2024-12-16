@@ -128,11 +128,3 @@ elif choice == "Upload & Transform":
                 skewed_image = skew_image(image, alpha, beta)
                 st.image(skewed_image, caption="Skewed Image", use_container_width=True)
            
-                    # Provide the option to download the transformed image
-                    with open(tmpfile.name, "rb") as file:
-                        st.download_button(
-                            label="Download Transformed Image",
-                            data=file,
-                            file_name="transformed_image.png",
-                            mime="image/png"
-                        )
