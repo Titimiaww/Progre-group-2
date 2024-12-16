@@ -127,4 +127,17 @@ elif choice == "Upload & Transform":
                 beta = st.slider("Skew Y Axis (degrees)", min_value=-45, max_value=45, value=20)
                 skewed_image = skew_image(image, alpha, beta)
                 st.image(skewed_image, caption="Skewed Image", use_container_width=True)
+              # Menambahkan fitur untuk menyimpan gambar
+            if transformed_image is not None:
+                # Membuat file sementara
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as tmp_file:
+                    temp_filename = tmp_file.name
+                    # Menyimpan gambar hasil transformasi ke file sementara
+                    cv2.imwrite(temp_filename, cv2.cvtColor(transformed_image, cv2.COLOR_RGB2BGR))
+                    # Menyediakan tombol untuk mendownload gambar
+                    st.download_button(
+                        label="Download Image",
+                        data=open(temp_filename, "rb").read(),
+                        file_name="transformed_image.png",
+                        mime="image/png"
            
