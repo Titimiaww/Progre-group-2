@@ -127,6 +127,7 @@ elif choice == "Upload & Transform":
                 beta = st.slider("Skew Y Axis (degrees)", min_value=-45, max_value=45, value=20)
                 skewed_image = skew_image(image, alpha, beta)
                 st.image(skewed_image, caption="Skewed Image", use_container_width=True)
+                
               # Menambahkan fitur untuk menyimpan gambar
             if transformed_image is not None:
                 # Membuat file sementara
